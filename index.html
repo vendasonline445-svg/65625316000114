@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Construtora CBL LTDA. Engenharia de ciclo completo em Maceió: da terraplenagem à construção de edifícios e acabamento em gesso de alto padrão.">
+    <title>Construtora CBL | Engenharia e Obras de Ciclo Completo</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        :root { --cbl-yellow: #FFB300; --cbl-dark: #1A1A1A; --cbl-grey: #424242; --cbl-light: #F4F4F4; }
+        body { font-family: 'Roboto', sans-serif; color: #333; background-color: #fff; overflow-x: hidden; }
+        h1, h2, h3, h4, h5, .navbar-brand { font-family: 'Oswald', sans-serif; text-transform: uppercase; }
+        
+        /* Navbar Engenharia */
+        .navbar { background: var(--cbl-dark); padding: 15px 0; border-bottom: 4px solid var(--cbl-yellow); }
+        .navbar-brand { font-weight: 700; color: #fff !important; font-size: 1.8rem; letter-spacing: 1px; }
+        .navbar-brand span { color: var(--cbl-yellow); }
+        .nav-link { font-weight: 700; color: #ccc; font-size: 0.9rem; letter-spacing: 1px; margin: 0 15px; transition: 0.3s; }
+        .nav-link:hover { color: var(--cbl-yellow); }
+
+        /* Dobra 1: Hero Construção */
+        .hero { 
+            background: linear-gradient(rgba(26, 26, 26, 0.85), rgba(26, 26, 26, 0.7)), url('https://images.unsplash.com/photo-1541888086425-d81bb19240f5?auto=format&fit=crop&w=1920&q=80') center/cover;
+            padding: 180px 0 150px; color: white;
+        }
+        .hero-badge { display: inline-block; background: var(--cbl-yellow); color: var(--cbl-dark); padding: 5px 15px; font-weight: 700; font-size: 0.9rem; margin-bottom: 25px; font-family: 'Oswald'; }
+        .btn-cbl { background: var(--cbl-yellow); color: var(--cbl-dark); font-weight: 700; font-family: 'Oswald'; padding: 15px 35px; border-radius: 2px; border: none; transition: 0.3s; font-size: 1.1rem; letter-spacing: 1px; }
+        .btn-cbl:hover { background: #e09e00; color: var(--cbl-dark); transform: translateY(-2px); }
+
+        /* Dobra 2: Sobre a Construtora */
+        .sobre-section { padding: 100px 0; background: var(--cbl-light); }
+        .sobre-box { border-left: 5px solid var(--cbl-yellow); padding-left: 30px; }
+        .sobre-box h2 { color: var(--cbl-dark); font-size: 2.5rem; margin-bottom: 20px; }
+
+        /* Dobra 3: Serviços / CNAEs */
+        .servicos-section { padding: 100px 0; background: #fff; }
+        .servico-card { 
+            background: var(--cbl-light); padding: 40px 30px; border-bottom: 4px solid transparent; 
+            transition: 0.4s; height: 100%;
+        }
+        .servico-card:hover { background: var(--cbl-dark); color: white; border-bottom-color: var(--cbl-yellow); transform: translateY(-10px); }
+        .servico-card:hover p, .servico-card:hover h4 { color: white !important; }
+        .s-icon { font-size: 45px; color: var(--cbl-yellow); margin-bottom: 20px; }
+        .servico-card h4 { color: var(--cbl-dark); font-size: 1.4rem; margin-bottom: 15px; }
+
+        /* Dobra 4: Autoridade e Segurança */
+        .autoridade { background: var(--cbl-yellow); color: var(--cbl-dark); padding: 70px 0; text-align: center; }
+        .autoridade h3 { font-size: 2rem; margin: 0; }
+        .autoridade span { display: block; font-family: 'Roboto'; font-weight: 400; font-size: 1.1rem; margin-top: 10px; }
+
+        /* Dobra 5: Contato e Mapa */
+        .contato-section { padding: 100px 0; background: var(--cbl-dark); color: white; }
+        .form-control { border-radius: 2px; border: 1px solid #444; padding: 15px; margin-bottom: 20px; background: #2a2a2a; color: white; }
+        .form-control:focus { box-shadow: none; border-color: var(--cbl-yellow); background: #333; color: white; }
+        .mapa-container { height: 100%; min-height: 450px; border: 2px solid #444; }
+
+        /* Footer */
+        footer { background: #111; color: #777; padding: 60px 0 20px; font-size: 0.9rem; }
+        footer h5 { color: white; margin-bottom: 20px; font-size: 1.1rem; letter-spacing: 1px; }
+        .f-links a { color: #777; text-decoration: none; display: block; margin-bottom: 10px; transition: 0.3s; }
+        .f-links a:hover { color: var(--cbl-yellow); }
+        .rodape-bottom { border-top: 1px solid #222; margin-top: 50px; padding-top: 20px; text-align: center; font-size: 0.8rem; }
+
+        /* Flutuantes */
+        .wa-float { position: fixed; bottom: 30px; right: 30px; background: #25d366; color: white; width: 65px; height: 65px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 32px; z-index: 1000; box-shadow: 0 10px 20px rgba(0,0,0,0.3); transition: 0.3s; text-decoration: none; }
+        .wa-float:hover { transform: scale(1.1); color: white; }
+        
+        #cookie-banner { position: fixed; bottom: 0; left: 0; width: 100%; background: var(--cbl-yellow); color: var(--cbl-dark); padding: 15px 0; z-index: 9999; text-align: center; font-family: 'Roboto'; font-weight: 700; }
+    </style>
+</head>
+<body>
+
+    <a href="https://wa.me/5582999999999" class="wa-float" target="_blank"><i class="fab fa-whatsapp"></i></a>
+
+    <nav class="navbar navbar-expand-lg sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">CONSTRUTORA <span>CBL</span></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+                <span class="navbar-toggler-icon" style="filter: invert(1);"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navMenu">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item"><a class="nav-link" href="#sobre">A Construtora</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#servicos">Especialidades</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contato">Orçamentos</a></li>
+                </ul>
+                <a href="#contato" class="btn btn-outline-warning btn-sm fw-bold px-4 py-2" style="font-family: 'Oswald';">CENTRAL DE PROJETOS</a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero text-center text-lg-start">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8">
+                    <div class="hero-badge">MACEIÓ / ALAGOAS</div>
+                    <h1 class="display-3 fw-bold mb-4">ENGENHARIA DE CICLO COMPLETO. DO SOLO AO ACABAMENTO.</h1>
+                    <p class="lead mb-5" style="color: #ddd;">A Construtora CBL entrega solidez e previsibilidade para o seu projeto. Executamos desde a infraestrutura de terraplenagem até a construção de edifícios e o acabamento premium de interiores.</p>
+                    <a href="#contato" class="btn btn-cbl me-3">SOLICITAR ORÇAMENTO</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="sobre" class="sobre-section">
+        <div class="container">
+            <div class="row align-items-center g-5">
+                <div class="col-lg-6">
+                    <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=800&q=80" alt="Obras de Engenharia" class="img-fluid border-bottom border-warning border-5 shadow">
+                </div>
+                <div class="col-lg-6">
+                    <div class="sobre-box">
+                        <h2>Solidez no mercado alagoano de construção civil.</h2>
+                        <p class="text-muted mb-4">Sediada no bairro Cidade Universitária em Maceió, a <strong>Construtora CBL LTDA</strong> nasceu para resolver a maior dor do mercado imobiliário e industrial: a fragmentação de fornecedores. </p>
+                        <p class="text-muted">Assumimos a responsabilidade integral da obra. Nossas equipes próprias de engenharia pesada preparam o terreno, levantam a estrutura predial e finalizam os ambientes com gesso e estuque de alto padrão. Menos intermediários significa estrito cumprimento de cronograma e orçamento.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="servicos" class="servicos-section text-center">
+        <div class="container">
+            <h2 class="mb-5" style="color: var(--cbl-dark); font-size: 2.5rem;">NOSSAS FRENTES DE OBRA</h2>
+            <div class="row g-4">
+                
+                <div class="col-lg-4">
+                    <div class="servico-card shadow-sm">
+                        <i class="fas fa-tractor s-icon"></i>
+                        <h4>Obras de Terraplenagem</h4>
+                        <p class="text-muted small">Preparo do solo, escavação, aterro, compactação e infraestrutura inicial. Maquinário pesado próprio para garantir a estabilidade fundamental antes das fundações. <em>(CNAE 43.13-4-00)</em></p>
+                    </div>
+                </div>
+
+                <div class="col-lg-4">
+                    <div class="servico-card shadow-sm">
+                        <i class="fas fa-building s-icon"></i>
+                        <h4>Construção de Edifícios</h4>
+                        <p class="text-muted small">Execução de obras verticais e horizontais, residenciais, comerciais ou galpões industriais. Gestão rigorosa de materiais e cumprimento das NRs de segurança. <em>(CNAE 41.20-4-00)</em></p>
+                    </div>
+                </div>
+
+                <div class="col-lg-4">
+                    <div class="servico-card shadow-sm">
+                        <i class="fas fa-paint-roller s-icon"></i>
+                        <h4>Acabamento em Gesso</h4>
+                        <p class="text-muted small">A etapa final que valoriza o empreendimento. Execução de forros, sancas, drywall, estuque e projetos luminotécnicos integrados para um acabamento impecável. <em>(CNAE 43.30-4-03)</em></p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="autoridade">
+        <div class="container">
+            <h3>OBRAS EXECUTADAS COM RIGOR TÉCNICO E CONFORMIDADE CREA/AL.</h3>
+            <span>Gestão de riscos, segurança do trabalho e responsabilidade técnica integral.</span>
+        </div>
+    </section>
+
+    <section id="contato" class="contato-section">
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-lg-5">
+                    <h2 class="mb-4 text-warning">ENVIE SEU PROJETO</h2>
+                    <p class="mb-5" style="color: #aaa;">Nossa equipe de engenharia está pronta para analisar plantas, realizar visitas técnicas em Maceió e região, e estruturar um cronograma financeiro para sua obra.</p>
+                    
+                    <form onsubmit="event.preventDefault(); alert('Solicitação de orçamento recebida. A equipe de engenharia da CBL entrará em contato.'); this.reset();">
+                        <input type="text" class="form-control" placeholder="Nome do Responsável / Empresa" required>
+                        <input type="tel" class="form-control" placeholder="Telefone / WhatsApp" required>
+                        <select class="form-control" required>
+                            <option value="">Selecione o tipo de serviço...</option>
+                            <option value="terraplenagem">Serviços de Terraplenagem</option>
+                            <option value="construcao">Construção Predial / Empreitada Global</option>
+                            <option value="acabamento">Projetos de Gesso / Acabamento</option>
+                        </select>
+                        <textarea class="form-control" rows="4" placeholder="Detalhes da Obra / Localização"></textarea>
+                        <button type="submit" class="btn btn-cbl w-100 mt-2">SOLICITAR ANÁLISE TÉCNICA</button>
+                    </form>
+                </div>
+                
+                <div class="col-lg-7">
+                    <div class="mapa-container p-1 bg-dark">
+                        <iframe 
+                            width="100%" 
+                            height="100%" 
+                            frameborder="0" 
+                            style="border:0;" 
+                            allowfullscreen="" 
+                            loading="lazy" 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15730.0000000000!2d-36.2700000!3d-9.7800000!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zOcKwNDYnNDguMCJTIDM2wrAxNicxMi4wIlc!5e0!3m2!1spt-BR!2sbr!4v1710000000000!5m2!1spt-BR!2sbr6">
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-lg-5">
+                    <h5>CONSTRUTORA CBL LTDA</h5>
+                    <p class="mb-4">Engenharia civil, infraestrutura e acabamentos.</p>
+                    <p class="mb-1"><i class="fas fa-map-marker-alt me-2 text-warning"></i> Rua 22, 351 - Cidade Universitária</p>
+                    <p class="mb-1 ms-4">Maceió - AL, CEP: 57073-168</p>
+                    <p class="mt-3"><i class="fas fa-envelope me-2 text-warning"></i> orcamentos@construtoracbl.com.br</p>
+                </div>
+                <div class="col-lg-4">
+                    <h5>REGISTROS E COMPLIANCE</h5>
+                    <p class="mb-1"><strong>CNAE Principal:</strong> 41.20-4-00</p>
+                    <p class="mb-3"><strong>CNAEs Sec.:</strong> 43.13-4-00 / 43.30-4-03</p>
+                    <p class="small">Empresa habilitada para execução de obras de engenharia civil, infraestrutura e design de interiores (estuque e gesso).</p>
+                </div>
+                <div class="col-lg-3 f-links text-lg-end">
+                    <h5>TERMOS LEGAIS</h5>
+                    <a href="politicas.html">Política de Privacidade</a>
+                    <a href="politicas.html#termos">Termos de Contrato e Obras</a>
+                    <a href="politicas.html#cookies">LGPD e Dados</a>
+                </div>
+            </div>
+            <div class="rodape-bottom">
+                © 2026 Construtora Cbl LTDA. Maceió/AL. Todos os Direitos Reservados.
+            </div>
+        </div>
+    </footer>
+
+    <div id="cookie-banner">
+        <div class="container d-flex justify-content-between align-items-center">
+            <span>Para garantir a melhor experiência e segurança dos seus projetos, utilizamos cookies. <a href="politicas.html" style="color: var(--cbl-dark); text-decoration: underline;">Saiba mais</a>.</span>
+            <button class="btn btn-dark btn-sm rounded-0 px-3 py-2" onclick="document.getElementById('cookie-banner').style.display='none'">ACEITAR</button>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
